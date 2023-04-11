@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$n = 20;
+for($x = 0; $x < $n; $x++) {
+  $date[$x]=rand(0, 100);
+  echo "$date[$x] ";
+}
+echo " <br> ";
+
+for($y=1; $y<$n; $y++) {
+  for($x=0; $x<$n-$y; $x++) {
+    if($date[$x]>$date[$x+1]) {
+     $tmp=$date[$x];
+     $date[$x]=$date[$x+1];
+     $date[$x+1]=$tmp;
+   }
+  }
+  for($x = 0; $x < $n; $x++) {
+  echo "$date[$x] ";
+  }
+ }
+ 
+?>
+
+</body>
+</html>
